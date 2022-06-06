@@ -15,20 +15,18 @@ function Navbar() {
       <h1 className="navbar--title">Feinfeld.</h1>
       <div>
         <a
-          className="navbar--link"
+          className={`navbar--link ${activePane === chartsId ? "active-link" : ""}`}
           id={chartsId}
           href="#"
           onClick={handleClick}
-          style={activePane === chartsId ? null : { textDecoration: "none" }}
         >
           Charts
         </a>
         <a
-          className="navbar--link"
+          className={`navbar--link ${activePane === portfolioId ? "active-link" : ""}`}
           id={portfolioId}
           href="#"
           onClick={handleClick}
-          style={activePane === portfolioId ? null : { textDecoration: "none" }}
         >
           Portfolio
         </a>
